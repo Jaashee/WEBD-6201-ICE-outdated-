@@ -2,6 +2,23 @@
 // AKA -- Anonymous Self-Executing Function
 (function ()
 {
+
+    /**
+     * Instantiates a contact and stores in localstorage
+     * @param fullName
+     * @param contactNumber
+     * @param emailAddress
+     * @constructor
+     */
+    function AddContact(fullName, contactNumber, emailAddress)
+    {
+        let contact = new core.Contact(fullName, contactNumber, emailAddress);
+        if (contact.serialize()){
+            let key = contact.FullName.substring(0,1) + Date.now();
+            localStorage.setItem(key, contact.serialize())
+        }
+    }
+
     function DisplayHomePage() {
 
         console.log("DisplayHomePage");
@@ -17,30 +34,29 @@
     }
     function DisplayProductsPage()
     {
-        console.log("Products Page Called!");
+
     }
 
     function DisplayServicesPage()
     {
-        console.log("Services Page Called!");
+
     }
 
     function DisplayAboutPage()
     {
-        console.log("About Page Called!");
+
     }
 
     function DisplayContactPage()
     {
-        console.log("Contact Page Called!");
 
         let sendButton = document.getElementById("sendButton");
         let subscribedCheckbox = document.getElementById("subscribeCheckBox")
 
-        sendButton.addEventListener("click", function(event)
+        sendButton.addEventListener("click", function (event)
         {
             if (subscribedCheckbox.checked){
-                let contact = new Contact(fullName.value, contactNumber.value, emailAddress.value);
+                let contact = new core.Contact(fullName.value, contactNumber.value, emailAddress.value);
                 if (contact.serialize()){
                     let key = contact.FullName.substring(0,1) + Date.now();
                     localStorage.setItem(key, contact.serialize())
@@ -53,7 +69,8 @@
     {
         console.log("Contact List Page Called!");
 
-        if(localStorage.length > 0){
+        if(localStorage.length > 0)
+        {
             let contactList = document.getElementById("contactList");
             let data = "";      // add deserialized data from local storage
 
@@ -62,24 +79,98 @@
             let index = 1;
             for(const key of keys){
                 let contactData = localStorage.getItem(key);
-                let contact = new Contact();
+                let contact = new core.Contact();
                 contact.deserialize(contactData);
                 data += `<tr><th scope="row" class="text-center">${index}</th>
                          <td>${contact.FullName}</td>
                          <td>${contact.ContactNumber}</td>
                          <td>${contact.EmailAddress}</td>
+                         
                          <td class="text-center">
-                            <button value="" class="btn btn-primary btn-sm edit">
-                            <i class="fas fas-edit fa-sm"></i></button>
+                            <button value="${key}" class="btn btn-primary btn-sm edit">
+                            <i class="fas fa-edit fa-sm"></i> Edit</button>
                          </td>
+                         
                          <td class="text-center">
-                            <button value="" class="btn btn-danger btn-sm delete">
-                            <i class="fas fas-trash-alt  fa-sm"></i></button>
+                            <button value="${key}" class="btn btn-danger btn-sm delete">
+                            <i class="fas fa-trash-alt  fa-sm"></i> Delete</button>
                          </td>
+                         
                          </tr>`;
                 index++;
             }
             contactList.innerHTML = data;
+
+            $("#addButton").on("click", () => {
+                location.href = "edit.html#add"
+            });
+
+            $("button.delete").on("click", function (){
+                // confirm delete
+                if(confirm("Delete contact, are you sure?")){
+                    localStorage.removeItem($(this).val())
+                }
+                location.href = "contact-list.html";
+            });
+
+            $("button.edit").on("click", function()
+            {
+                location.href = "edit.html#" + $(this).val();
+            });
+
+        }
+    }
+
+    function DisplayEditPage()
+    {
+        console.log("Edit Page");
+
+        let page = location.hash.substring(1);
+        switch(page){
+            case "add":
+                $("main>h1").text("Add Contact");
+                $("#editButton").html(`<i class="fas fa-plus-circle fa-sm"></i> Add `)
+
+                $("editButton").on(("click"), (event) => {
+                    event.preventDefault();
+                    AddContact(fullName.value, contactNumber.value, emailAddress.value);
+                    // refresh contact-List page
+                    location.href = "contact-list.html"
+                });
+
+                $("#cancelButton").on(("click"), () => {
+                    location.href = "contact-list.html";
+                });
+
+                break;
+            default:{
+                // get contact information from localstorage
+                let contact = new core.Contact();
+                contact.deserialize(localStorage.getItem(page));
+
+                //display the contact info in the edit form
+                $("#fullName").val(contact.FullName);
+                $("#contactNumber").val(contact.ContactNumber);
+                $("#emailAddress").val(contact.EmailAddress);
+
+                // when editButton is pressed - update the contact
+                $("editButton").on("click", (event) => {
+
+                    event.preventDefault();
+                    //get any changes from the form
+                    contact.FullName = $("fullName").val();
+                    contact.ContactNumber = $("contactNumber").val();
+                    contact.EmailAddress = $("emailAddress").val();
+
+                    // replace the item in localstorage
+                    localStorage.setItem(page, contact.serialize());
+
+                    // return ti the contact-list
+                    location.href = "contact-list.html"
+                });
+
+            }
+            break;
         }
     }
 
@@ -109,6 +200,10 @@
 
             case "Contact List":
                 DisplayContactListPage();
+                break;
+
+            case "Edit Contact":
+                DisplayEditPage();
                 break;
         }
     }
