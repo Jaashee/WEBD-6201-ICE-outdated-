@@ -7,17 +7,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be3155cf-65ae-468e-877d-89cf0ac45209" name="Changes" comment="Week 9 commit refactored user.js to user.ts">
-      <change afterPath="$PROJECT_DIR$/week9/scripts/app.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/week9/scripts/app.ts" afterDir="false" />
+    <list default="true" id="be3155cf-65ae-468e-877d-89cf0ac45209" name="Changes" comment="Week 9 Final Commit refactored app.js to app.ts and cleaned up rest of code">
+      <change afterPath="$PROJECT_DIR$/week10/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/.nojekyll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Content/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Data/users.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/app.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/app.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/authguard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/authguard.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/authguard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/contact.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/contact.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/namespace.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/namespace.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/namespace.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/router.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/router.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/user.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Scripts/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/components/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/components/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/contact-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/products.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/Views/content/services.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week10/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week5/content/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/week5/content/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week5/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/week5/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week6/content/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/week6/content/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week7-2/content/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/week7-2/content/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week7/content/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/week7/content/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week9/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/week9/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week9/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/week9/scripts/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week4-ICE2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/week4-ICE2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +107,7 @@
     "nodejs_package_manager_path": "yarn",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "ts.external.directory.path": "C:\\Users\\jasha\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8617.44\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "ts.external.directory.path": "C:\\Users\\jasha\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\223.8836.50\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -89,6 +120,8 @@
       <recent name="C:\Users\jasha\WebstormProjects\WEBD-6201-ICE\week6" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jasha\WebstormProjects\WEBD-6201-ICE\week10" />
+      <recent name="C:\Users\jasha\WebstormProjects\WEBD-6201-ICE" />
       <recent name="C:\Users\jasha\WebstormProjects\WEBD-6201-ICE\week7-2\views\content" />
       <recent name="C:\Users\jasha\WebstormProjects\WEBD-6201-ICE\week7\views\components" />
     </key>
@@ -111,7 +144,11 @@
       <workItem from="1678218544654" duration="11143000" />
       <workItem from="1678314311585" duration="1221000" />
       <workItem from="1678374335046" duration="15419000" />
-      <workItem from="1678458259507" duration="25926000" />
+      <workItem from="1678458259507" duration="28564000" />
+      <workItem from="1678766123754" duration="454000" />
+      <workItem from="1678921300180" duration="410000" />
+      <workItem from="1679681799219" duration="1929000" />
+      <workItem from="1679685245698" duration="1241000" />
     </task>
     <task id="LOCAL-00001" summary="Week 4-ICE1 First Commit with edit page and jquery in app.js">
       <created>1675809807750</created>
@@ -288,7 +325,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678498603615</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Week 9 Final Commit refactored app.js to app.ts and cleaned up rest of code">
+      <created>1678500743301</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678500743301</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +385,7 @@
     <MESSAGE value="Week 9 commit added converted contact.js to contact.ts" />
     <MESSAGE value="Week 9 commit refactored authguard.js, namespace.js, router.js to typescript file (.ts)" />
     <MESSAGE value="Week 9 commit refactored user.js to user.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Week 9 commit refactored user.js to user.ts" />
+    <MESSAGE value="Week 9 Final Commit refactored app.js to app.ts and cleaned up rest of code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Week 9 Final Commit refactored app.js to app.ts and cleaned up rest of code" />
   </component>
 </project>
